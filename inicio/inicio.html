@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Seções Full Screen com CSS - Viewport</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:800,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body 
+    {
+      font-size: 16px;
+      font-family: "Raleway", sans-serif;
+    }
+
+    h1 
+    {
+      font-size: 4rem;
+    }
+
+    p 
+    {
+      font-size: 2.5rem;
+      font-weight: 300;
+    }
+
+    section 
+    {
+      display: table;
+      width: 100%;
+    }
+
+    .height-80 
+    {
+      background: #8e44ad;
+      height: 80vh;
+    }
+
+    .height-50 
+    {
+      background: #34495e;
+      height: 50vh;
+    }
+
+    .height-100 {
+      background: #e74c3c;
+      height: 100vh;
+    }
+
+    .content 
+    {
+      color: #ffffff;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 7%;
+    }
+
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+  
+  <body>
+    * {
+  box-sizing: border-box;
+}
+
+body 
+{
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo 
+{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content 
+{
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn 
+{
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover 
+{
+  background: #ddd;
+  color: black;
+}
+.sidebar 
+{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a 
+{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+
+{
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn 
+{
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn 
+{
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main
+ {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+<section class="height-100">
+      <div class="content">
+        <video autoplay muted loop id="myVideo">
+  <source src="videos\chuvas.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video><div class="content">
+<div id = "main"> 
+  <button class = "openbtn" onclick = "openNav ()" > ☰ Abrir barra lateral </button >    
+  <h2> Barra lateral recolhida </h2 >
+  <p> aki voce encontra as melhores promocoes de viajens sem se preocupar com o bolso!!!!!! </p >
+</div >
+​
+</div>
+</section>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+
+<div id="main">
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+<script>
+{
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 
+
+        <h1>Aki voce encontrara mais promocoes para viajar sem se preocupar !</h1>
+        <p>Essa div foi setada para ter 100vh, ocupando 100% da tela =)</p>
+      </div>
+    </section>
+  </body>
+</html>
